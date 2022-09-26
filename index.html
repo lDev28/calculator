@@ -5,14 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" href="style.css">
-	<title>calc</title>
+	<title>calculator</title>
 </head>
 
 <body>
 	<div class="container">
 		<div class="row">
-			<input id="display" type="text">
+			<input id="display" type="text" value="">
 		</div>
 		<div class="row">
 			<button class="white" onclick="press('7')">7</button>
@@ -27,13 +28,13 @@
 			<button class="orange" onclick="press('-')">-</button>
 		</div>
 		<div class="row">
-			<button class="white" onclick="press('3')">3</button>
-			<button class="white" onclick="press('2')">2</button>
 			<button class="white" onclick="press('1')">1</button>
+			<button class="white" onclick="press('2')">2</button>
+			<button class="white" onclick="press('3')">3</button>
 			<button class="orange" onclick="press('*')">*</button>
 		</div>
 		<div class="row">
-			<button class="orange" onclick="clear()">C</button>
+			<button class="orange" onclick="done()">C</button>
 			<button class="white" onclick="press('0')">0</button>
 			<button class="orange" onclick="calc()">=</button>
 			<button class="orange" onclick="press('/')">/</button>
@@ -41,8 +42,9 @@
 	</div>
 	<script>
 		let display = document.getElementById('display');
-		function clear() {
+		function done() {
 			display.value = "";
+			// alert('none');
 		}
 		function calc() {
 			display.value = eval(display.value);
@@ -50,6 +52,7 @@
 		function press(x) {
 			display.value += x;
 		}
+		console.log(display.value);
 	</script>
 </body>
 
