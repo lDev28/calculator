@@ -1,4 +1,4 @@
 # calculator
 ### Try it 
 
-not har and so simple )
+not hard but, so simple )
